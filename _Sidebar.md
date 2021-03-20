@@ -19,8 +19,3 @@
     <a href="???">???</a>
     <br>
 </details>
-<details>
-    <summary>: ??? App</summary>
-    <a href="???">???</a>
-    <br>
-</details>
