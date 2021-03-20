@@ -1,20 +1,21 @@
 <details>
-    <summary>Console and Winforms: Recipe Converter App</summary>
-    <a href="https://github.com/Almantask/Java-Homework/wiki/Primitive-Types,-Variables-and-Scope">Primitive Types, Variables and Scope</a>
+    <summary>Console, Winforms and Testing</summary>
+    <a href="???">Problem 1: International Recipe Converter</a>
+    <a href="https://github.com/Almantask/Java-Homework/wiki/Primitive-Types,-Variables-and-Scope">Lesson 1: C# Keywords and User Input</a>
     <br>
 </details>
 <details>
-    <summary>Webservices and Databases: ??? App</summary>
+    <summary>Webservices, databases and Git</summary>
     <a href="???>???</a>
     <br>
 </details>
 <details>
-    <summary>React I: ??? App</summary>
+    <summary>React I</summary>
     <a href="???>???</a>
     <br>
 </details>
 <details>
-    <summary>React II: ??? App</summary>
+    <summary>React II</summary>
     <a href="???>???</a>
     <br>
 </details>
