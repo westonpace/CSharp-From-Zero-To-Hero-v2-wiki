@@ -281,6 +281,9 @@ Adding strings like this might be quite a burden for a reader. It's easier to si
 string full = $"{piece1} {piece2}";
 ```
 
+String interpolation also allows to format a string. For example, if we have a `double number = 0.0111111` printing it using `Console.WriteLine(number);` will print `0.0111111`. What if we want only 2 digits after `.`?
+We can solve this problem by formatting the number string: `Console.WriteLine($"{number:F2}";`. `F2` here means a number which will have two numbers after separator.
+
 Prefer to use string interpolation whenever you combine strings.
 
 ## var keyword
