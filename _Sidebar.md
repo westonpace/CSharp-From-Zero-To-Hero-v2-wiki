@@ -1,8 +1,8 @@
 <details>
     <summary>Console, Winforms and Testing</summary>
-    <a href="???">Problem 1: International Recipe Converter</a>
+    <a href="https://github.com/csinn/CSharp-From-Zero-To-Hero-v2/wiki/International-Recipe-Converter">Problem 1: International Recipe Converter</a>
     <br>
-    <a href="https://github.com/Almantask/Java-Homework/wiki/Primitive-Types,-Variables-and-Scope">Lesson 1: C# Keywords and User Input</a>
+    <a href="https://github.com/csinn/CSharp-From-Zero-To-Hero-v2/wiki/C%23-Keywords-and-User-Input">Lesson 1: C# Keywords and User Input</a>
     <br>
 </details>
 <details>
