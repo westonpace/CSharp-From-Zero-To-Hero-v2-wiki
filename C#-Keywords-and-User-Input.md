@@ -191,6 +191,22 @@ Like so: `1/2.0=0.5`.
   
 Like in normal maths, division from `0` is impossible. Also, division and multiplication has priority over addition and subtraction.
 
+## Comments
+
+In C#, `comments` are written using `//`. The purpose of comments is to add a note for yourself about the code below.
+Comments can be made from multiple lines as well using `/**/`. For example:
+
+```cs
+// This is a.
+int a = 1;
+
+/*
+This is b.
+b is equal to a.
+*/
+int b = a;
+```
+
 ## Function
 
 Function is a named block of code.
@@ -303,3 +319,22 @@ Tom Jefferson is 19 years old, his weight is 50 kg and his height is 156.5 cm.
 ```
 2) Calculate and print body-mass index (BMI)
 3) Do 1 and 2 for another person.
+
+## Do You Understand the Topic?
+
+- Which data type would you use for storing:
+- - age?
+- - count of people?
+- - weight and height?
+- - first letter of your name?
+- - the answer to the question: "Did you understand primitive types?"
+- What is a variable?
+- Every variable has what 3 parts?
+- What arithmetic operations can be performed with number types?
+- What happens when you divide smaller integer from a bigger integer?
+- What happens when you divide from zero?
+- When do you need to cast explicitly?
+- Do you need to cast implicitly?
+- How can you read input from a Console?
+- How can you output something to a Console?
+- How to create a function which prompts a user to input something and then prints what was inputed?
