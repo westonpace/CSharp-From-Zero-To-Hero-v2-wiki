@@ -35,21 +35,21 @@ In order to set Visual Studio up, refer to [this video](https://youtu.be/Zm0bNCr
 
 In order to start making something yourself, you will need to open Visual Studio and select `Create a new project`:
 
-[[/images/month1/new-project.png]]
+![New Project](/images/month1/new-project.png)
 
 The most simple application you can create is a console application. In the next window, type `console` and select `Console App (.NE Core)`. Make sure you select the one with C# tag on it:
 
-[[/images/month1/console-project.png]]
+![C# .NET Core Console Project](/images/month1/console-project.png)
 
 In the next window, name your program `RecipeApp` (or anything you want) and hit `Create`.
 
-[[/images/month1/BAM.png]]
+![POW!](/images/month1/Pow.png)
 
 #### Run, programmer, run!
 
 A new window opens with your very first project! Well, what are you waiting for? Run it! You can do this by either hitting `F5` or by clicking a `run button` at the top of the window:
 
-[[/images/month1/run.png]]
+![Run Program](/images/month1/run.png)
 
 On behalf of all the programmers of the world, welcome! `Hello World!` is how even the greatest programming heroes of today have started their journey. What you can see is a `console application` - a window without any user interface- just plain text on a black background. You can close the console window now to focus back on Visual Studio.
 
@@ -93,7 +93,7 @@ Where (scope) you write code matters. For now, all the code we write will be ins
 The new project contains a bit more than just the `Program.cs` file.
 Focus your attention on the right side of 
 
-[[/images/month1/Solution-Structure.png]]
+![Solution Structure](/images/month1/Solution-Structure.png)
 
 On the right side (by default) you can see a `Solution Explorer`. In .NET, a solution (marked as 1) is a container for all files needed that your program is made of. Essentially, treat a `solution` as a container of projects (marked as 2).  Project is like a module (or a layer) for a full program, which provides functionality for some (or all) of it. Projects are made of different files, but for now, we will focus .cs file. For code to be compiled as C# code, it needs to be put in .cs files (marked as 3).
 
@@ -107,8 +107,9 @@ Variables are essentially data. For a variable to be meaningful, it needs to hav
 * Name- how will we refer to a variable? Can only be made of [aA-zZ], _, @, [0-9]. 
 * Value- what data does the variable hold?   
 
-You can declare a variable without a value, but C# compiler won't let you use it, because it has no value (is not initialized). Example of such error can be seen in the image below.  
-[[/images/Chapter1/Lesson1/undefined.png]]
+You can declare a variable without a value, but C# compiler won't let you use it, because it has no value (is not initialized). Example of such error can be seen in the image below.
+
+![undefined variable](/images/month1/undefined.png)
 
 ### Numbers
 
