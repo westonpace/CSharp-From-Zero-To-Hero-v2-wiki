@@ -27,21 +27,21 @@ Based on this table, every cooking unit should be converted to SI unit equivalen
 
 ### No 100s
 
-If the cooking unit is more than 100 SI unit, it should be converted to the next grade of it. For example, 100 ml should be 0.1 l instead.
-However, 10 ml is fine by itself.
+If the cooking unit is more than `100` SI unit, it should be converted to the next grade of it. For example, `100 ml` should be `0.1 l` instead.
+However, `10 ml` is fine by itself.
 
 ### Reverse conversion
 
-Given you have recipes with ml and l units, you should be able to convert them back to cooking units.
+Given you have recipes with `ml` and `l` units, you should be able to convert them back to cooking units.
 
 ### Chaos fixing
 
 Some recipes are inconsistent in the way they define cooking units (after all, we're all people and not machine, right?).
-For example, given you have 4 teaspoons, there should be an option to convert them back to 1 tablespoon. Similar to 100 ml being converted to 0.1l, we should pick the most appropriate unit of cooking as well.
+For example, given you have `4 teaspoons`, there should be an option to convert them back to `1 tablespoon`. Similar to `100 ml` being converted to `0.1 l`, we should pick the most appropriate unit of cooking as well.
 
 ### File extension
 
-Recipe files should end with .recipe. Otherwise, they should not be allowed to be read.
+Recipe files should end with `.recipe`. Otherwise, they should not be allowed to be read.
 
 ### No non-recipe files
 
