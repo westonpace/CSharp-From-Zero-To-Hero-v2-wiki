@@ -1,5 +1,3 @@
-# Problem 1: International Recipe Converter
-
 ## Intro
 
 What is a Cup, Gallon, Pint or Quart? Those units might seem relative to different observes.
