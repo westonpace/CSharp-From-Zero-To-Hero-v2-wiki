@@ -108,7 +108,7 @@ Variables are essentially data. For a variable to be meaningful, it needs to hav
 * Value- what data does the variable hold?   
 
 You can declare a variable without a value, but C# compiler won't let you use it, because it has no value (is not initialized). Example of such error can be seen in the image below.  
-[[/images/Chapter1/Lesson1/undefined.png]]
+[[/images/month1/undefined.png]]
 
 ### Numbers
 
