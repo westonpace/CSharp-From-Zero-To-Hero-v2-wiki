@@ -15,7 +15,7 @@ With C#, you can create:
 
 You can create pretty much anything you want using C#!
 
-Most commonly, it is used for building enterprise business applications. It's a language heavilly supported by Microsoft, loved by the community and has a good future ahead of it. The latest available version (as of time of writing) is C# 9.
+Most commonly, it is used for building enterprise business applications. It's a language heavily supported by Microsoft, loved by the community and has a good future ahead of it. The latest available version (as of time of writing) is C# 9.
 
 ## .NET
 
@@ -78,7 +78,7 @@ The file starts with a `using System;` statement. `using` is needed, when we wan
 
 Next is a `namespace RecipeApp`. Code must belong in some namespace and the first one in our code is usually named after a project it belongs to.
 
-Next- a `{`. This refers to a `scope`- an access boundary of code. Scope has a start `{` and an end `}`. This scope is scope of a namespace. Code outside of a scope (`namespace RecipeApp` in our case) is not accessible by default (unless we import it with a using statement). If there was no such thing as a scope, it would be really hard to pick what we want, because everything would be acessible to us.
+Next- a `{`. This refers to a `scope`- an access boundary of code. Scope has a start `{` and an end `}`. This scope is scope of a namespace. Code outside of a scope (`namespace RecipeApp` in our case) is not accessible by default (unless we import it with a using statement). If there was no such thing as a scope, it would be really hard to pick what we want, because everything would be accessible to us.
 
 After that follows a `class`. It's like a container for many code blocks. `Program` is a class which contains logic to start our application. The name itself can be anything, but the name we have is the default for a startup class. A class has its own scope too `{}`.
 
@@ -111,7 +111,7 @@ You can declare a variable without a value, but C# compiler won't let you use it
 
 ![undefined variable](./images/month1/undefined.png)
 
-If instead we `assign a value`, for example `a = 5;`, we will no longer see that error.
+If instead we assign a value, for example `a = 5;`, we will no longer see that error.
 
 By convention, variable names start are `camelCase` - first word starts with non-capital letter and then each new word starts with a capital letter.
 
@@ -139,7 +139,7 @@ Most whole number types have unsigned versions of them, which double their size.
 |----------|:-------:|----------------------------------------------------:|-----------:|
 | float    |    32   |  ±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38<sup>   |     f      |
 | double   |    64   |  ±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup>  |     d      |
-| deciaml  |    128  |  ±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup>  |     m      |
+| decimal  |    128  |  ±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup>  |     m      |
 
 Default is double.  
 
@@ -166,7 +166,7 @@ You cannot store an empty character (`''`- won't compile), but you can store an 
 
 `bool` is a logical type. It can be either `true` or `false`. Logical variables drive logical statements, but about that in later lessons.
 
-## Arithmetics
+## Arithmetic
 
 ### Addition or Subtraction Results
 
@@ -179,17 +179,17 @@ You cannot store an empty character (`''`- won't compile), but you can store an 
 | string   |   char  |    string      |
 | string   |   long  |    string      |
 
-Adding or subtracking two values of different types will store the result in type with bigger space.
+Adding or subtracting two values of different types will store the result in type with bigger space.
 
 ### Division & Multiplication
 
 Both are trivial and applicable only to number types.  
-Dividing number you should pay attention because you if divide from the higher number, the result will be `0`.  
+While dividing number, you should pay attention because if the dividend number is less than the divisor number, the result will be `0`.  
 For example: `1/2=0`.  
 If we want the result to be `0.5`, all we need to do is to add a fraction to either of the numbers when dividing.  
 Like so: `1/2.0=0.5`.
   
-Like in normal maths, division from `0` is impossible. Also, division and multiplication has priority over addition and subtraction.
+Like in maths, division from `0` is impossible. Also, division and multiplication has priority over addition and subtraction.
 
 ## Comments
 
@@ -237,7 +237,7 @@ int Sum(int a, int b)
 }
 ```
 
-By convention, function names are `PascalCased` - first word starts with a capital letter and then every new word is capitalized as well.
+By convention, function names are `PascalCased` - in which every word is capitalized.
 
 ## Console
 
@@ -312,13 +312,13 @@ ___
 
 ## Homework
 
-Read name, surname, age, weight (in kg) and height (in cm) from console.
-1) Print all the info based on the example message below:
+1) Read name, surname, age, weight (in kg) and height (in cm) from console.
+2) Print a message to the screen based on the information given in **1)** (an example message shown below):
 ```
 Tom Jefferson is 19 years old, his weight is 50 kg and his height is 156.5 cm. 
 ```
-2) Calculate and print body-mass index (BMI)
-3) Do 1 and 2 for another person.
+3) Calculate and print body-mass index (BMI)
+4) Do 1 and 2 for another person.
 
 ## Do You Understand the Topic?
 
@@ -337,4 +337,4 @@ Tom Jefferson is 19 years old, his weight is 50 kg and his height is 156.5 cm.
 - Do you need to cast implicitly?
 - How can you read input from a Console?
 - How can you output something to a Console?
-- How to create a function which prompts a user to input something and then prints what was inputed?
+- How to create a function which prompts a user to input something and then prints what was inputted?
