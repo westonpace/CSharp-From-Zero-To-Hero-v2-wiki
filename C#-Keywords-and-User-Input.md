@@ -1,25 +1,107 @@
-# C# Keyword and User Input
+# C# Keywords and User Input
 
-## Every program in a nutshell
+Programming is an act of solving problems through writing code. And code is just a set of instructions for a computer to execute.
 
-A program is simply a set of instructions that get compiled and converted to machine code, which then are executed and put to use to solve a specific problem. Instructions essentially are functions (actions) and variables (data).
+I would like to invite you to a programming journey and take your first steps using C#.
 
-In C#, every instruction is terminated with a semicolon (;). There can be multiple instructions in the same line, but it's not very readable and by convention, we stick to a single instruction per line.  
+## What is C#?
+
+C# is a multi-purpose high level programming language. That means that you don't need to manage much of low level things (like memory assignment or machine instructions). Those things are abstracted away from you through a managed environment.
+
+With C#, you can create:
+- Webservices (ASP.NET Core)
+- Desktop apps (Winforms, UWP, WPF)
+- Mobile apps (Xamarin)
+- Games (Unity)
+- And more!
+
+You can create pretty much anything you want using C#!
+
+Most commonly, it is used for building enterprise business applications. It's a language heavilly supported by Microsoft, loved by the community and has a good future ahead of it. The latest available version (as of time of writing) is C# 9.
+
+## .NET
+
+.NET is an ecosystem which adds all sorts of features built on top of C#. For example: reading a file, getting data from a URL, sending an email, connecting to a database, etc. .NET also includes other languages: Visual Basic and F#, however we will not be covering those during the boot camp.
 
 ## Visual Studio
 
-Visual Studio is an IDE (integrated development environment), which provides a developer with all the needed tools to do their job: code editor, debugger, code runner, compiler, etc...
-[[/images/Chapter1/Lesson1/Solution.png]]
-In the image above you see a view that will show up on the right side (by default) when you open your first Visual Studio project. In .NET, a solution (marked as 1 in illustration) is a container for all files needed that your program is made of. Solution doesn't contain files for your program by itself- that is done by projects. Solutions are made of projects (marked as 2 in illustration).  Project is like a module (or a layer) for a full program, which provides functionality for some part of it. Projects are made of different files, but for now, we will focus .cs file. For code to be compiled as C# code, it needs to be put in .cs files (marked as 3 in illustration).
+A writer needs a pen and paper; a programmer needs an IDE (integrated development environment). IDE provides a programmer with all the needed tools to do their job: code editor, debugger, code runner, compiler, etc.
 
-### How to run an application?
+Visual Studio is an IDE for .NET.
 
-[[/images/Chapter1/Lesson1/Run.png]]
-To run an application, we first need an executable type of project. The most simple type of executable is a console application. Every executable program needs to have a starting point. In a console application, that starting point is the Main function. To run it, you first need to select a project you want to run (marked as 1 in illustration) and hit the run button (marked as 2 in illustration). As an alternative to run button, you can press F5.  
+### Your First Program
+
+#### New Project
+
+In order to start making something yourself, you will need to open Visual Studio and select `Create a new project`:
+
+[[/images/month1/new-project.png]]
+
+The most simple application you can create is a console application. In the next window, type `console` and select `Console App (.NE Core)`:
+
+[[/images/month1/console-project.png]]
+
+In the next window, name your program `RecipeApp` (or anything you want) and hit `Create`.
+
+[[/images/month1/BAM.png]]
+
+#### Run, programmer, run!
+
+A new window opens with your very first project! Well, what are you waiting for? Run it! You can do this by either hitting `F5` or by clicking a `run button` at the top of the window:
+
+[[/images/month1/run.png]]
+
+On behalf of all the programmers of the world, welcome! `Hello World!` is how even the greatest programming heroes of today have started their journey. What you can see is a `console application` - a window without any user interface- just plain text on a black background. You can close the console window now to focus back on Visual Studio.
+
+#### What did just happen?
+
+We just ran our first code- `Program.cs`. We `compiled` the code file (converted code into machine instruction) and the machine executed them. To be precise, this code has been executed:
+
+```cs
+using System;
+
+namespace RecipeApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+```
+
+Let's try to understand it!
+
+The file starts with a `using System;` statement. `using` is needed, when we want to use code which is in a different namespace. A `namespace` is just a container for multiple code files- usually a namespace is named after a physical directory path which holds the code. `System` namespace contains code for `Console` interactions and therefore we had to import it. The word `statement`- means a single instruction of code to execute and in C# a statement needs to end with `;`.
+
+One line below is a `namespace RecipeApp`. Code must belong in some namespace and the first one in our code is usually named after a project it belongs to.
+
+What follows next is a `{`. This refers to a `scope`- an access boundary of code. Scope has a start `{` and an end `}`. This scope is scope of a namespace. Code outside of a scope (`namespace RecipeApp` in our case) is not accessible by default (unless we import it with a using statement). If there was no such thing as a scope, it would be really hard to pick what we want, because everything would be acessible to us.
+
+What follows next is a `class`. It's like a container for many code blocks. `Program` is a class which contains logic to start our application. The name itself can be anything, but the name we have is the default for a startup class. A class has its own scope too `{}`.
+
+`static void Main(string[] args)` is an `entry point` of our application. It is a `function`- a container for a single logical block of code. Every function should tell 1 thing for a computer to do. In our case- it runs the application which prints `Hello World`. A function has its own scope as well `{}`.
+
+`Console.WriteLine("Hello World!");` - is the code which makes a call to print text on the console screen. Most of the code will be written inside functions. 
+
+Where (scope) you write code matters. For now, all the code we write will be inside the `Main` function.
+
+#### Solution Structure
+
+The new project contains a bit more than just the `Program.cs` file.
+Focus your attention on the right side of 
+
+[[/images/month1/Solution-Structure.png]]
+
+On the right side (by default) you can see a `Solution Explorer`. In .NET, a solution (marked as 1) is a container for all files needed that your program is made of. Essentially, treat a `solution` as a container of projects (marked as 2).  Project is like a module (or a layer) for a full program, which provides functionality for some (or all) of it. Projects are made of different files, but for now, we will focus .cs file. For code to be compiled as C# code, it needs to be put in .cs files (marked as 3 in illustration).
+
+___
 
 ## Variables
 
-Variables are essentially data. It's hard to imagine a program which could exist without any. For a variable to be meaningful, it needs to have 3 things:  
+Variables are essentially data. For a variable to be meaningful, it needs to have 3 things:  
 * Type- what kind of data can a variable hold? There are 3 primitive variable categories: numbers, text and logical.
 * Name- how will we refer to a variable? Can only be made of [aA-zZ], _, @, [0-9]. 
 * Value- what data does the variable hold?   
