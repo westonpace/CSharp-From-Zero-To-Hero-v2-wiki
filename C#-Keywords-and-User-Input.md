@@ -72,7 +72,7 @@ namespace RecipeApp
 }
 ```
 
-Let's try to understand it!
+#### Let's try to understand it!
 
 The file starts with a `using System;` statement. `using` is needed, when we want to refer code which is in a different namespace. A `namespace` is just a container for multiple code files- usually a namespace is named after a physical directory path which holds the code. `System` namespace contains code for basic interactions with a system, including - `Console` - therefore we had to import it. The word `statement`- means a single instruction of code to execute and in C# a statement needs to end with `;`.
 
@@ -82,7 +82,7 @@ Next- a `{`. This refers to a `scope`- an access boundary of code. Scope has a s
 
 After that follows a `class`. It's like a container for many code blocks. `Program` is a class which contains logic to start our application. The name itself can be anything, but the name we have is the default for a startup class. A class has its own scope too `{}`.
 
-`static void Main(string[] args)` is an `entry point` of our application. It is a `function`- a container for a single logical block of code. Every function should tell 1 thing for a computer to do. In our case- it runs the application which prints `Hello World`. A function has its own scope as well `{}`.
+`static void Main(string[] args)` is an `entry point` of our application. It is a `function`- a container for a single logical block of code. Every function should tell 1 thing for a computer to do. In our case- it runs the application which prints `Hello World`. A function has its own scope as well `{}`. We will talk about `static` in future lessons.
 
 `Console.WriteLine("Hello World!");` - is the code which makes a call to print text on the console screen. Most of the code will be written inside functions. 
 
@@ -111,15 +111,19 @@ You can declare a variable without a value, but C# compiler won't let you use it
 
 ![undefined variable](./images/month1/undefined.png)
 
+If instead we `assign a value`, for example `a = 5;`, we will no longer see that error.
+
+By convention, variable names start are `camelCase` - first word starts with non-capital letter and then each new word starts with a capital letter.
+
 ### Numbers
 
-Number types are divided into two groups. Whole numbers and numbers with a fraction.
+Number types are divided into two groups. Whole and floating point.
 
 #### Whole numbers
 
 | Type     |   Bits  |  Min value             |      Max value     :|
 |----------|:-------:|-----------------------:|--------------------:|
-| byte     |    8    |         0              |      255:           |
+| byte     |    8    |         0              |      255            |
 | short    |    16   |      -32 768           |    32,767           |
 | int      |    32   |    -2 147 483 648      |  2 147 483 648      |
 | long     |    64   |    -9x10<sup>18</sup>  |  9x10<sup>18</sup>  |
@@ -127,7 +131,7 @@ Number types are divided into two groups. Whole numbers and numbers with a fract
 
 Default is int.  
 
-Note: Most whole number types have unsigned versions of them, which double their size. For example, short is 32 767 max value, but ushort is 65 535, however, min value of ushort is 0 (no negative).
+Most whole number types have unsigned versions of them, which double their size. For example, short is 32 767 max value, but ushort is 65 535, however, min value of ushort is 0 (no negative).
 
 #### Floating point numbers (numbers with fraction)
 
@@ -139,31 +143,32 @@ Note: Most whole number types have unsigned versions of them, which double their
 
 Default is double.  
 
-Note: if you want to declare a variable as float or decimal, you will need to explicitly say so by either:  
-A: using type symbol `float f = 2.0f;`  
-B: casting `float f = (float) 2.0;`  
-*Important*: for money or scientific calculations use decimal.  
+If you want to declare a variable as float or decimal, you will need to explicitly say so by either:  
+A) using type symbol `float f = 2.0f;`  
+B) casting `float f = (float) 2.0;`  
+
+**Important**: for money or scientific calculations should use `decimal`.  
 
 ### Text
 
-char- is a single symbol.
-To store a char use single quotes ('').
+`char`- is a single symbol.
+To store a char use `''`.
 
 `char myChar = 'a';`
 
-string- is many symbols. To store a string use double quotes ("").
+`string`- is many symbols. To store a string use `""`.
 
 `string myStr = "Joe#2020";`
 
-Note: you cannot store an empty character (''- won't compile), but you can store an empty string.
+You cannot store an empty character (`''`- won't compile), but you can store an empty string.
 
 ### Logical
 
-bool is a logical type. It can be either true or false. Logical variables drive logical statements, but about that in later lessons.
+`bool` is a logical type. It can be either `true` or `false`. Logical variables drive logical statements, but about that in later lessons.
 
 ## Arithmetics
 
-### Addition results
+### Addition or Subtraction Results
 
 | Type1    |   Type2 |  Result type   |
 |:--------:|:-------:|:--------------:|
@@ -174,39 +179,115 @@ bool is a logical type. It can be either true or false. Logical variables drive 
 | string   |   char  |    string      |
 | string   |   long  |    string      |
 
-Note: subtraction is identical, except that we cannot one string from another.  
-Note: adding two values of different types will store the result in type with bigger space. This is done to avoid buffer overflow.
+Adding or subtracking two values of different types will store the result in type with bigger space.
 
 ### Division & Multiplication
 
 Both are trivial and applicable only to number types.  
-Dividing number you should pay attention because you if divide from the higher number, the result will be 0.  
+Dividing number you should pay attention because you if divide from the higher number, the result will be `0`.  
 For example: `1/2=0`.  
-If we want the result to be 0.5, all we need to do is to add a fraction to either of the numbers when dividing.  
+If we want the result to be `0.5`, all we need to do is to add a fraction to either of the numbers when dividing.  
 Like so: `1/2.0=0.5`.
   
-Like in normal maths, division from 0 is impossible. Also, division and multiplication has priority over addition and subtraction.
+Like in normal maths, division from `0` is impossible. Also, division and multiplication has priority over addition and subtraction.
+
+## Function
+
+Function is a named block of code.
+
+### First Look
+
+We already know how to call a `Console.WriteLine("Hello World")` function. `WriteLine` is a function name, `"Hello World"` is the input. We pass input within the `()` after the function name.
+
+### Your First Function
+
+A function, just like a variable, needs to have a (return) type and a name. Optionally, it can also take arguments (each which should have a type and a name). All that a function does is defined within its scope `{}`. Not all functions must return something, such functions will have a return type of `void`.
+
+For example, a function which takes no arguments and does not return anything:
+
+```cs
+void WriteHello()
+{
+    Console.WriteLine("Hello");
+}
+```
+
+Another example, a function which takes arguments and returns a value:
+
+```cs
+int Sum(int a, int b)
+{
+    return a + b;
+}
+```
+
+By convention, function names are `PascalCased` - first word starts with a capital letter and then every new word is capitalized as well.
 
 ## Console
-
-Console is the minimum kind of display for printing data. All the functions that console are exposed under ``System.Console`` class.
 
 ### Write
 
 To write text to console, all you have to do is `Console.Write("My text");`. 
-To write a line of text to console, all you have to do is `Console.WriteLine("My text");`. 
-The printed text will appear without "" because the quotation marks are used to have a distinction between code and text, but such distinction is no longer needed when printing text.  
-Note: if you type `cw` in code editor and press tab, it will autocomplete the snippet with `Console.WriteLine();`
+If you want text to be printed in a new line, you can `Console.WriteLine("My text");`. 
+The printed text will appear without `""` because the quotation marks are used to have a distinction between code and text, but such distinction is no longer needed when printing text.  
+
+If you type `cw` in code editor and press `tab`, it will write `Console.WriteLine();` to code file.
 
 ### Read
 
 We can read user input in many different ways, but for now, we will focus on the most simple one- `Console.ReadLine();`. This will try to read a line of text that a user typed and pressed enter. For example `string name = Console.ReadLine();`.
 
-### var keyword
+## Parse
 
-You don't have to always explicitly declare a variable with a type. It might get tedious sometimes, especially when types get more complex and long. Sometimes we either don't care about a type or it's extremely obvious what the type is. By convention, in most cases, we use `var` to define a type. For example: ``var name = "Kaisinel;". Type of name, in this case, will be string. Compiler is smart enough to know the type in most cases and when it doesn't, you will have to hint it with explicit types, casting or other...
+Parse is a term for converting text (`string`) into something more usable (i.e a number). Usually, a `string` is converted to another type through a `Parse` or `TryParse` method.
 
-Note: `var` doesn't make C# to determine type on the fly. If you hover over `var` in IDE, you will still see the actual type.
+Use `Parse` when you are sure that the given text is convertable to the type:
+
+`string` to `int`:
+
+```cs
+string text = "123";
+int number = int.Parse(text);
+```
+
+And when the text can be anything, use `TryParse`:
+
+```cs
+string text = "123a";
+// Returns false and sets number to 0 (default value).
+bool isNumber = int.TryParse(text, out int number);
+```
+
+`anything` to `string`:
+```cs
+string text = number.ToString();
+```
+
+## String Concatination
+
+If you add two string together, you get a string. Therefore:
+
+```cs
+string piece1 = "Hello";
+string piece2 = "World!";
+// Hello World!
+string full = piece1 + " " + piece2;
+```
+
+Adding strings like this might be quite a burden for a reader. It's easier to simplify this using `string interpolation`. It gives us a way to combine strings more naturally using a `$` literal:
+
+```cs
+// Hello World!
+string full = $"{piece1} {piece2}";
+```
+
+Prefer to use string interpolation whenever you combine strings.
+
+## var keyword
+
+You don't have to explicitly declare a variable with a type. Sometimes it might even get tedious, especially when types get more complex and long. Sometimes we either don't care about a type or it's extremely obvious what the type is. By convention, in most cases, we use `var` to define a type. For example: `var name = "Kaisinel;"`. Type of a name, in this case, will be `string`. Compiler is smart enough to know the type in most cases and when it doesn't, you will have to hint it with explicit types or casting.
+
+`var` doesn't make C# to determine type on the fly. If you hover over `var` in IDE, you will still see the actual type.
 
 ___
 
