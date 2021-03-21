@@ -35,7 +35,7 @@ Given you have recipes with `ml` and `l` units, you should be able to convert th
 ### Chaos fixing
 
 Some recipes are inconsistent in the way they define cooking units (after all, we're all people and not machine, right?).
-For example, given you have `4 teaspoons`, there should be an option to convert them back to `1 tablespoon`. Similar to `100 ml` being converted to `0.1 l`, we should pick the most appropriate unit of cooking as well.
+For example, given you have `3 teaspoons`, there should be an option to convert them back to `1 tablespoon`. Similar to `100 ml` being converted to `0.1 l`, we should pick the most appropriate unit of cooking as well.
 
 ### File extension
 
