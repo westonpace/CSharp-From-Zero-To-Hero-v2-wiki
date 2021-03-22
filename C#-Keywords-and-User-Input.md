@@ -1,12 +1,12 @@
 Programming is an act of solving problems through writing code. And code is just a set of instructions for a computer to execute.
 
-I would like to invite you to a programming journey and take your first steps using C#.
+I would like to invite you to a programming journey where you will take your first steps using C#.
 
 ## What is C#?
 
-C# is a multi-purpose high level programming language. That means that you don't need to manage much of low level things (like memory assignment or machine instructions). Those things are abstracted away from you through a managed environment.
+C# is a multi-purpose high level programming language. That means that you don't need to manage low level things (like memory assignment or machine instructions). Those things are abstracted away from you through a managed environment.
 
-With C#, you can create:
+With C# you can create:
 - Webservices (ASP.NET Core)
 - Desktop apps (Winforms, UWP, WPF)
 - Mobile apps (Xamarin)
@@ -15,7 +15,7 @@ With C#, you can create:
 
 You can create pretty much anything you want using C#!
 
-Most commonly, it is used for building enterprise business applications. It's a language heavily supported by Microsoft, loved by the community and has a good future ahead of it. The latest available version (as of time of writing) is C# 9.
+Most commonly it is used for building enterprise business applications. It's a language heavily supported by Microsoft, loved by the community and has a good future ahead of it. The latest available version (as of time of writing) is C# 9.
 
 ## .NET
 
@@ -23,7 +23,7 @@ Most commonly, it is used for building enterprise business applications. It's a 
 
 ## Visual Studio
 
-A writer needs a pen and paper; a programmer needs an IDE (integrated development environment). IDE provides a programmer with all the needed tools to do their job: code editor, debugger, code runner, compiler, etc.
+A writer needs a pen and paper; a programmer needs an IDE (integrated development environment). An IDE provides a programmer with all the needed tools to do their job: code editor, debugger, code runner, compiler, etc.
 
 Visual Studio is an IDE for .NET.
 
@@ -37,7 +37,7 @@ In order to start making something yourself, you will need to open Visual Studio
 
 ![New Project](./images/month1/new-project.png)
 
-The most simple application you can create is a console application. In the next window, type `console` and select `Console App (.NE Core)`. Make sure you select the one with C# tag on it:
+The most simple application you can create is a console application. In the next window, type `console` and select `Console App (.NET Core)`. Make sure you select the one with C# tag on it:
 
 ![C# .NET Core Console Project](./images/month1/console-project.png)
 
@@ -53,7 +53,7 @@ A new window opens with your very first project! Well, what are you waiting for?
 
 On behalf of all the programmers of the world, welcome! `Hello World!` is how even the greatest programming heroes of today have started their journey. What you can see is a `console application` - a window without any user interface- just plain text on a black background. You can close the console window now to focus back on Visual Studio.
 
-#### What did just happen?
+#### What just happened?
 
 We just ran our first code- `Program.cs`. We `compiled` the code file- converted code into machine instructions- and our computer has executed them. To be precise, this code has been executed:
 
@@ -74,17 +74,17 @@ namespace RecipeApp
 
 #### Let's try to understand it!
 
-The file starts with a `using System;` statement. `using` is needed, when we want to refer code which is in a different namespace. A `namespace` is just a container for multiple code files- usually a namespace is named after a physical directory path which holds the code. `System` namespace contains code for basic interactions with a system, including - `Console` - therefore we had to import it. The word `statement`- means a single instruction of code to execute and in C# a statement needs to end with `;`.
+The file starts with a `using System;` statement. `using` is needed, when we want to refer to code which is in a different namespace. A `namespace` is just a container for multiple code files- usually a namespace is named after a physical directory path which holds the code. The `System` namespace contains code for basic interactions with a system, including - `Console` - therefore we had to import it.  The `System` namespace is provided by .NET. The word `statement`- means a single instruction of code to execute and in C# a statement needs to end with `;`.
 
-Next is a `namespace RecipeApp`. Code must belong in some namespace and the first one in our code is usually named after a project it belongs to.
+Next is a `namespace RecipeApp`. Code must belong in some namespace and the first one in our code is usually named after the project it belongs to.
 
-Next- a `{`. This refers to a `scope`- an access boundary of code. Scope has a start `{` and an end `}`. This scope is scope of a namespace. Code outside of a scope (`namespace RecipeApp` in our case) is not accessible by default (unless we import it with a using statement). If there was no such thing as a scope, it would be really hard to pick what we want, because everything would be accessible to us.
+Next- a `{`. This refers to a `scope`- an access boundary of code. Scope has a start `{` and an end `}`. This scope is the scope of the namespace. Code outside of a scope (`namespace RecipeApp` in our case) is not accessible by default (unless we import it with a using statement). If there was no such thing as a scope, it would be really hard to pick what we want, because everything would be accessible to us.
 
 After that follows a `class`. It's like a container for many code blocks. `Program` is a class which contains logic to start our application. The name itself can be anything, but the name we have is the default for a startup class. A class has its own scope too `{}`.
 
 `static void Main(string[] args)` is an `entry point` of our application. It is a `function`- a container for a single logical block of code. Every function should tell 1 thing for a computer to do. In our case- it runs the application which prints `Hello World`. A function has its own scope as well `{}`. We will talk about `static` in future lessons.
 
-`Console.WriteLine("Hello World!");` - is the code which makes a call to print text on the console screen. Most of the code will be written inside functions. 
+`Console.WriteLine("Hello World!");` - is the code which makes a call to print text on the console screen. Most of the code will be written inside functions.  This function is part of the `System` namespace and is provided by .NET.
 
 Where (scope) you write code matters. For now, all the code we write will be inside the `Main` function.
 
@@ -95,7 +95,7 @@ Focus your attention on the right side of
 
 ![Solution Structure](./images/month1/Solution-Structure.png)
 
-On the right side (by default) you can see a `Solution Explorer`. In .NET, a solution (marked as 1) is a container for all files needed that your program is made of. Essentially, treat a `solution` as a container of projects (marked as 2).  Project is like a module (or a layer) for a full program, which provides functionality for some (or all) of it. Projects are made of different files, but for now, we will focus .cs file. For code to be compiled as C# code, it needs to be put in .cs files (marked as 3).
+On the right side (by default) you can see a `Solution Explorer`. In .NET, a solution (marked as 1) is a container for all files needed that your program is made of. Essentially, treat a `solution` as a container of projects (marked as 2).  Project is like a module (or a layer) for a full program, which provides functionality for some (or all) of it. Projects are made of different kinds of files, but for now, we will focus on .cs files. For code to be compiled as C# code, it needs to be put in .cs files (marked as 3).
 
 ___
 
@@ -107,13 +107,13 @@ Variables are essentially data. For a variable to be meaningful, it needs to hav
 * Name- how will we refer to a variable? Can only be made of [aA-zZ], _, @, [0-9]. 
 * Value- what data does the variable hold?   
 
-You can declare a variable without a value, but C# compiler won't let you use it, because it has no value (is not initialized). Example of such error can be seen in the image below.
+You can declare a variable without a value, but the C# compiler won't let you use it, because it has no value (is not initialized). An example of such an error can be seen in the image below.
 
 ![undefined variable](./images/month1/undefined.png)
 
 If instead we assign a value, for example `a = 5;`, we will no longer see that error.
 
-By convention, variable names start are `camelCase` - first word starts with non-capital letter and then each new word starts with a capital letter.
+By convention, variable names are `camelCase` - first word starts with non-capital letter and then each new word starts with a capital letter.
 
 ### Numbers
 
@@ -129,9 +129,9 @@ Number types are divided into two groups. Whole and floating point.
 | long     |    64   |    -9x10<sup>18</sup>  |  9x10<sup>18</sup>  |
 
 
-Default is int.  
+Default is int.
 
-Most whole number types have unsigned versions of them, which double their size. For example, short is 32 767 max value, but ushort is 65 535, however, min value of ushort is 0 (no negative).
+Most whole number types have unsigned versions of them, which double their maximum size. For example, short is 32 767 max value, but ushort is 65 535, however, min value of ushort is 0 (no negative).
 
 #### Floating point numbers (numbers with fraction)
 
@@ -147,16 +147,16 @@ If you want to declare a variable as float or decimal, you will need to explicit
 A) using type symbol `float f = 2.0f;`  
 B) casting `float f = (float) 2.0;`  
 
-**Important**: for money or scientific calculations should use `decimal`.  
+**Important**: for money or scientific calculations you should use `decimal`.  
 
 ### Text
 
-`char`- is a single symbol.
+`char`- is a single character.
 To store a char use `''`.
 
 `char myChar = 'a';`
 
-`string`- is many symbols. To store a string use `""`.
+`string`- is many characters. To store a string use `""`.
 
 `string myStr = "Joe#2020";`
 
@@ -164,7 +164,7 @@ You cannot store an empty character (`''`- won't compile), but you can store an 
 
 ### Logical
 
-`bool` is a logical type. It can be either `true` or `false`. Logical variables drive logical statements, but about that in later lessons.
+`bool` is a logical type. It can be either `true` or `false`. Logical variables drive logical statements, but more about that in later lessons.
 
 ## Arithmetic
 
@@ -179,17 +179,17 @@ You cannot store an empty character (`''`- won't compile), but you can store an 
 | string   |   char  |    string      |
 | string   |   long  |    string      |
 
-Adding or subtracting two values of different types will store the result in type with bigger space.
+Adding or subtracting two values of different types will store the result in the larger type.
 
 ### Division & Multiplication
 
 Both are trivial and applicable only to number types.  
-While dividing number, you should pay attention because if the dividend number is less than the divisor number, the result will be `0`.  
+While dividing whole numbers, you should pay attention because if the dividend number is less than the divisor number, the result will be `0`.  
 For example: `1/2=0`.  
 If we want the result to be `0.5`, all we need to do is to add a fraction to either of the numbers when dividing.  
 Like so: `1/2.0=0.5`.
   
-Like in maths, division from `0` is impossible. Also, division and multiplication has priority over addition and subtraction.
+Like in maths, division by `0` is impossible. Also, division and multiplication have priority over addition and subtraction.
 
 ## Comments
 
@@ -209,11 +209,11 @@ int b = a;
 
 ## Function
 
-Function is a named block of code.
+A function is a named block of code.
 
 ### First Look
 
-We already know how to call a `Console.WriteLine("Hello World")` function. `WriteLine` is a function name, `"Hello World"` is the input. We pass input within the `()` after the function name.
+We already know how to call the `Console.WriteLine("Hello World")` function. `WriteLine` is a function name, `"Hello World"` is the input. We pass input within the `()` after the function name.
 
 ### Your First Function
 
@@ -245,9 +245,9 @@ By convention, function names are `PascalCased` - in which every word is capital
 
 To write text to console, all you have to do is `Console.Write("My text");`. 
 If you want text to be printed in a new line, you can `Console.WriteLine("My text");`. 
-The printed text will appear without `""` because the quotation marks are used to have a distinction between code and text, but such distinction is no longer needed when printing text.  
+The printed text will appear without `""` because the quotation marks are used to distinguish between code and text, but such distinction is no longer needed when printing text.  
 
-If you type `cw` in code editor and press `tab`, it will write `Console.WriteLine();` to code file.
+If you type `cw` in the code editor and press `tab`, it will write `Console.WriteLine();` to code file.
 
 ### Read
 
@@ -255,7 +255,7 @@ We can read user input in many different ways, but for now, we will focus on the
 
 ## Parse
 
-Parse is a term for converting text (`string`) into something more usable (i.e a number). Usually, a `string` is converted to another type through a `Parse` or `TryParse` method.
+Parse is a term for converting text (`string`) into something more usable (e.g. a number). Usually, a `string` is converted to another type through a `Parse` or `TryParse` method.
 
 Use `Parse` when you are sure that the given text is convertable to the type:
 
@@ -281,7 +281,7 @@ string text = number.ToString();
 
 ## String Concatination
 
-If you add two string together, you get a string. Therefore:
+If you add two strings together, you get a string. Therefore:
 
 ```cs
 string piece1 = "Hello";
@@ -297,23 +297,23 @@ Adding strings like this might be quite a burden for a reader. It's easier to si
 string full = $"{piece1} {piece2}";
 ```
 
-String interpolation also allows to format a string. For example, if we have a `double number = 0.0111111` printing it using `Console.WriteLine(number);` will print `0.0111111`. What if we want only 2 digits after `.`?
-We can solve this problem by formatting the number string: `Console.WriteLine($"{number:F2}";`. `F2` here means a number which will have two numbers after separator.
+String interpolation also allows us to format a string. For example, if we have a `double number = 0.0111111` printing it using `Console.WriteLine(number);` will print `0.0111111`. What if we want only 2 digits after `.`?
+We can solve this problem by formatting the number string: `Console.WriteLine($"{number:F2}");`. `F2` here means a number which will have two numbers after the decimal separator.
 
 Prefer to use string interpolation whenever you combine strings.
 
 ## var keyword
 
-You don't have to explicitly declare a variable with a type. Sometimes it might even get tedious, especially when types get more complex and long. Sometimes we either don't care about a type or it's extremely obvious what the type is. By convention, in most cases, we use `var` to define a type. For example: `var name = "Kaisinel;"`. Type of a name, in this case, will be `string`. Compiler is smart enough to know the type in most cases and when it doesn't, you will have to hint it with explicit types or casting.
+You don't have to explicitly declare a variable with a type. Sometimes it might even get tedious, especially when type names get more complex and long. Sometimes we either don't care about a type or it's extremely obvious what the type is. By convention, in most cases, we use `var` to define a type. For example: `var name = "Kaisinel";`. The type of name, in this case, will be `string`. The compiler is smart enough to know the type in most cases and when it doesn't, you will have to hint it with explicit types or casting.
 
-`var` doesn't make C# to determine type on the fly. If you hover over `var` in IDE, you will still see the actual type.
+`var` doesn't make C# determine type on the fly. If you hover over `var` in IDE, you will still see the actual type.
 
 ___
 
 ## Homework
 
 1) Read name, surname, age, weight (in kg) and height (in cm) from console.
-2) Print a message to the screen based on the information given in **1.** (an example message shown below):
+2) Print a message to the screen based on the information given in **1.** (an example message is shown below):
 ```
 Tom Jefferson is 19 years old, his weight is 50 kg and his height is 156.5 cm. 
 ```
@@ -331,8 +331,8 @@ Tom Jefferson is 19 years old, his weight is 50 kg and his height is 156.5 cm.
 - What is a variable?
 - Every variable has what 3 parts?
 - What arithmetic operations can be performed with number types?
-- What happens when you divide smaller integer from a bigger integer?
-- What happens when you divide from zero?
+- What happens when you divide a smaller integer from a bigger integer?
+- What happens when you divide by zero?
 - When do you need to cast explicitly?
 - Do you need to cast implicitly?
 - How can you read input from a Console?
